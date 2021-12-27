@@ -1,0 +1,38 @@
+[debug] [2021-12-15T10:51:46.276Z] ----------------------------------------------------------------------
+[debug] [2021-12-15T10:51:46.278Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\H\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2021-12-15T10:51:46.278Z] CLI Version:   8.10.0
+[debug] [2021-12-15T10:51:46.279Z] Platform:      win32
+[debug] [2021-12-15T10:51:46.279Z] Node Version:  v14.18.0
+[debug] [2021-12-15T10:51:46.279Z] Time:          Wed Dec 15 2021 16:21:46 GMT+0530 (India Standard Time)
+[debug] [2021-12-15T10:51:46.279Z] ----------------------------------------------------------------------
+[debug] [2021-12-15T10:51:46.279Z] 
+[debug] [2021-12-15T10:51:46.285Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2021-12-15T10:51:46.285Z] > authorizing via signed-in user
+[debug] [2021-12-15T10:51:46.285Z] [iam] checking project spotify-clone-f75ee for permissions ["firebase.projects.get","firebasedatabase.instances.update","firebasehosting.sites.update","firebaserules.releases.create","firebaserules.releases.update","firebaserules.rulesets.create"]
+[debug] [2021-12-15T10:51:46.288Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/spotify-clone-f75ee:testIamPermissions  
+ {"permissions":["firebase.projects.get","firebasedatabase.instances.update","firebasehosting.sites.update","firebaserules.releases.create","firebaserules.releases.update","firebaserules.rulesets.create"]}
+[debug] [2021-12-15T10:52:07.785Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Wed, 15 Dec 2021 10:52:08 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","server-timing":"gfet4t7; dur=1154","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-12-15T10:52:07.787Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/spotify-clone-f75ee  
+ 
+[debug] [2021-12-15T10:52:13.899Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Wed, 15 Dec 2021 10:52:15 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] 
+[info] === Deploying to 'spotify-clone-f75ee'...
+[info] 
+[info] i  deploying database, storage, hosting 
+[info] i  database: checking rules syntax... 
+[debug] [2021-12-15T10:52:13.916Z] >>> HTTP REQUEST PUT https://spotify-clone-f75ee-default-rtdb.firebaseio.com/.settings/rules.json?dryRun=true  
+ {
+  "rules": {
+    ".read": "now < 1641666600000",  // 2022-1-9
+    ".write": "now < 1641666600000",  // 2022-1-9
+  }
+}
+[debug] [2021-12-15T10:53:17.863Z] Error: Client network socket disconnected before secure TLS connection was established
+    at connResetException (internal/errors.js:639:14)
+    at TLSSocket.onConnectEnd (_tls_wrap.js:1570:19)
+    at TLSSocket.emit (events.js:412:35)
+    at TLSSocket.emit (domain.js:475:12)
+    at endReadableNT (internal/streams/readable.js:1334:12)
+    at processTicksAndRejections (internal/process/task_queues.js:82:21)
+[error] 
+[error] Error: Server Error. Client network socket disconnected before secure TLS connection was established
